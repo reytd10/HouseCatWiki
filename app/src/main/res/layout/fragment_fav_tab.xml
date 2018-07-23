@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="awa.animalw.Tabs.FavoriteTab">
+
+    <ListView
+        android:id="@+id/favoritelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:childDivider="@android:color/black"
+        android:divider="@android:color/black"
+        android:dividerHeight="5.0sp"
+        android:layout_below="@id/search"/>
+
+
+
+
+</RelativeLayout>

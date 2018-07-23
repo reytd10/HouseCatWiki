@@ -1,0 +1,1 @@
+A simple app that contains all information of all animals, or most of em.

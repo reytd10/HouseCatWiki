@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="awa.animalw.Tabs.SearchTab">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search Here"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/searchlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:childDivider="@android:color/black"
+        android:divider="@android:color/black"
+        android:dividerHeight="5.0sp"
+        android:layout_below="@id/search"/>
+</RelativeLayout>
