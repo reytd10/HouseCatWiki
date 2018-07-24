@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.CompoundButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -50,10 +52,21 @@ public class detailInfoCat extends AppCompatActivity {
         catInfo.setMovementMethod(new ScrollingMovementMethod());
 
         //Favorite button
-        ToggleButton favorite = (ToggleButton) findViewById(R.id.favbuton);
-        boolean check = this.hasFav(cName);
+        final ToggleButton favorite = (ToggleButton) findViewById(R.id.favbuton);
+        //setting animations
+        final Animation buttonAnim= AnimationUtils.loadAnimation(this,R.anim.bounce);
+        BounceInterpolator bounce = new BounceInterpolator(0.2,20);
+        buttonAnim.setInterpolator(bounce);
+        //setting animation when clicking on favorite button
+        favorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                favorite.startAnimation(buttonAnim);
+            }
+        });
         //checking if cat is already in favorite or not
         //if it is, turn the fav button on.
+        boolean check = this.hasFav(cName);
         favorite.setChecked(check);
        //toggle function
         favorite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
