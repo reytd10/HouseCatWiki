@@ -12,7 +12,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_green_dark"
+        android:background="@android:color/background_light"
         android:minHeight="46dp">
 
 
@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/dottedborder"
             app:layout_constraintBottom_toTopOf="@+id/tabDots"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -55,10 +55,11 @@
             android:layout_height="0dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/dotborder"
             android:fontFamily="casual"
+            android:scrollbars="vertical"
+            android:gravity="center"
             android:textSize="18sp"
-            android:scrollbars = "vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -67,8 +68,8 @@
 
         <ToggleButton
             android:id="@+id/favbuton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="47dip"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="16dp"
             android:background="@drawable/toggle_selector"
@@ -77,11 +78,29 @@
             android:textOn=""
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.975"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.433" />
+
+        <Button
+            android:id="@+id/info1"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/infor3"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/tabDots"
+            app:layout_constraintEnd_toStartOf="@+id/favbuton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tabDots"
+            app:layout_constraintTop_toTopOf="@+id/tabDots"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </android.support.constraint.ConstraintLayout>
