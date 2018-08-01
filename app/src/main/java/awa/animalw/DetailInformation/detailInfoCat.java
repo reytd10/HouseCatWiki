@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -50,6 +51,10 @@ public class detailInfoCat extends AppCompatActivity {
         TextView catInfo = (TextView) findViewById(R.id.catInfo);
         catInfo.setText(getCatInfo(cName));
         catInfo.setMovementMethod(new ScrollingMovementMethod());
+
+        //Info Button
+        Button info1 = (Button) findViewById(R.id.info1);
+
 
         //Favorite button
         final ToggleButton favorite = (ToggleButton) findViewById(R.id.favbuton);
